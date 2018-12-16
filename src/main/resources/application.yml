@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://172.20.10.14/sell?characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: false
+server:
+  servlet:
+    context-path: /sell
+  port: 7070
