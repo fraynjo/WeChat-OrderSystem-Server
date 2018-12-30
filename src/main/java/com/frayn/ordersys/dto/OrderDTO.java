@@ -1,23 +1,19 @@
-package com.frayn.ordersys.dataobject;
+package com.frayn.ordersys.dto;
 
+import com.frayn.ordersys.dataobject.OrderDetail;
 import com.frayn.ordersys.enums.OrderStatusEnum;
 import com.frayn.ordersys.enums.PayStatusEnum;
 import lombok.Data;
-import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-@Entity
 @Data
-@DynamicUpdate
-public class OrderMaster {
+public class OrderDTO {
 
     /** 订单id. */
-    @Id
     private String orderId;
 
     /** 买家名字. */
@@ -47,4 +43,5 @@ public class OrderMaster {
     /** 更新时间. */
     private Date updateTime;
 
+    List<OrderDetail> orderDetailList;
 }
